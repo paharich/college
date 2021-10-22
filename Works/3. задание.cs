@@ -18,32 +18,32 @@ namespace DZ_3
             //Определения количества слов
             Console.WriteLine("ОПРЕДЕЛЕНИЕ КОЛИЧЕСТВА СЛОВ");
             Console.WriteLine("Введите текст: ");
-            String text;
-            text = Console.ReadLine();
-            int i = 0;
+            String text;    //Создание строковой переменной
+            text = Console.ReadLine();  //Ввод предложения и запись в переменную
+            int i = 0;  //целочисленная переменная для подсчёта слов и "костыля"
 
-            for(int counter = 0; counter < text.Length; counter++) {
+            for(int counter = 0; counter < text.Length; counter++) {    //Цикл считающий количество слов(поправочка, он считает кол-во пробелов)
                 if(text[counter] == ' ') {
                     i += 1;
                 }
             }
-            i = i + 1;
-            Console.WriteLine("Количество слов в предложение" + " '" + text + "' " + "составляете " + i + "\n\n");
+            i = i + 1;  //"Костыль", добовляет дополнительное значеник к "пробелам", чтобы стало нужное число слов
+            Console.WriteLine("Количество слов в предложение" + " '" + text + "' " + "составляете " + i + "\n\n");  //Вывод результата
             
             
             //Три фамилии
             Console.WriteLine("КАКАЯ ФАМИЛИЯ БОЛЬШЕ?\n");
             Console.Write("Первая фамилия: ");
-            string SecondName_1 = Console.ReadLine();
+            string SecondName_1 = Console.ReadLine();   //Ввод фамилии
             Console.Write("Вторая фамилия: ");
-            string SecondName_2 = Console.ReadLine();
+            string SecondName_2 = Console.ReadLine();   //Ввод фамилии
             Console.Write("Третья фамилия: ");
-            string SecondName_3 = Console.ReadLine();
-            if (SecondName_1.Length > SecondName_2.Length) {
-                Console.WriteLine("Фамилия " + SecondName_1 + " длиннее остальных");
-            } else if(SecondName_2.Length > SecondName_3.Length) {
-                Console.WriteLine("Фамилия " + SecondName_2 + " длиннее остальных");
-            }else Console.WriteLine("Фамилия " + SecondName_3 + " длиннее остальных" );
+            string SecondName_3 = Console.ReadLine();   //Ввод фамилии
+            if (SecondName_1.Length > SecondName_2.Length) {    //Сравнение первой и второй фамилии
+                Console.WriteLine("Фамилия " + SecondName_1 + " длиннее остальных");    //Выводится первая фамилия при true, иначе продолжается сравнение
+            } else if(SecondName_2.Length > SecondName_3.Length) {  //Сравнение второй и третьей фамилии
+                Console.WriteLine("Фамилия " + SecondName_2 + " длиннее остальных");    //Выводится вторая фамилия при true, иначе продолжается сравнение
+            }else Console.WriteLine("Фамилия " + SecondName_3 + " длиннее остальных" ); //Выводится третья фамилия
             
         }
     }
